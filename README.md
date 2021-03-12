@@ -1,24 +1,20 @@
-# README
+# MODEL DOCUMENTATION
+BRAND = {id,name, updated_at, created_at}
+HOP = {id,name, updated_at, created_at}
+BEER = {id,name, style, brand_id, updated_at, created_at}
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# API DOCUMENTATION
+GET	/api/brands =>  returns(res.data) all brands ie [brand,brand]
+  - axios.get('/api/brands')
 
-Things you may want to cover:
+GET	/api/brands/:id => returns(res.data) { brand: brand, beers: [beer, beer]}
+ - axios.get('/api/brands/1')
 
-* Ruby version
+Post /api/brands
+  - axios.post(`/api/brands`, {name:'value of name'}) => returns created brand or 422 error
 
-* System dependencies
+Put /api/brands/:id
+  - axios.put(`/api/brands/1`, {name:'value of name'}) => returns updated brand or 422 error  
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+DELETE '/api/brands/:id'
+ - axios.delete(`/api/brands/1`) => returns deleted brand
