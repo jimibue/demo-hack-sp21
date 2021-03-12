@@ -30,3 +30,6 @@ PUT	/api/brands/:brand_id/beers/:id => return updat beer or error
 
 DELETE	/api/brands/:brand_id/beers/:id
  - axios.delete(`/api/brands/1/beers/1`) => return deleted beer
+
+working on something here not ready to commit
+
